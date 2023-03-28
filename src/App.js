@@ -17,15 +17,17 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario categorias={categorias.map(categoria => categoria.nome)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)}/>
-
-      {categorias.map(categoria => <Categoria 
-        key={categoria.nome} 
-        nome={categoria.nome} 
-        corPrimaria={categoria.corPrimaria} 
-        corSecundaria={categoria.corSecundaria} 
-        colaboradores={colaboradores.filter(colaborador => colaborador.categoria === categoria.nome)}
-      />)}   
-
+      
+      <section className="categorias">
+        {categorias.map(categoria => <Categoria 
+          key={categoria.nome} 
+          nome={categoria.nome} 
+          corPrimaria={categoria.corPrimaria} 
+          corSecundaria={categoria.corSecundaria} 
+          colaboradores={colaboradores.filter(colaborador => colaborador.categoria === categoria.nome)}
+        />)}   
+      </section>
+      <Rodape />
     </div>
   );
 }
