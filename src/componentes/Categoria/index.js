@@ -1,5 +1,5 @@
 import Jogo from '../Jogo'
-import './categoria.css'
+import './Categoria.css'
 
 const Categoria = ({ categoria, jogos }) => {
     return (
