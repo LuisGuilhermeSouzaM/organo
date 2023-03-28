@@ -1,3 +1,4 @@
+
 import './rodape.css'
 
 const Rodape = () => {
@@ -27,6 +28,8 @@ const Rodape = () => {
        <section>
         <p>
             Desenvolvido por Alura.
+        </p>
+        <p>
             Adaptado por Luis Guilherme de Souza Munhoz.
         </p>
        </section>

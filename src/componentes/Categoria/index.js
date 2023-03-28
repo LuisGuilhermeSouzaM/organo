@@ -1,17 +1,16 @@
-import Colaborador from '../Colaborador'
-import './Categoria.css'
+import Jogo from '../Jogo'
+import './categoria.css'
 
-const Categoria = (props) => {
-    const css = { backgroundColor: props.corSecundaria }
-
+const Categoria = ({ categoria, jogos }) => {
     return (
-        (props.colaboradores.length > 0) ? <section className='time' style={css}>
-            <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
-            <div className='colaboradores'>
-                {props.colaboradores.map( colaborador => <Colaborador corDeFundo={props.corPrimaria} key={colaborador.nome} nome={colaborador.nome} cargo={colaborador.cargo} imagem={colaborador.imagem}/> )}
+
+        jogos.length > 0 && <section className='categoria' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: categoria.corPrimaria }}>
+            <h3 style={{ borderColor: categoria.corSecundaria }}>{categoria.nome}</h3>
+            <div className='jogos'>
+                {jogos.map((jogo, indice) => <Jogo key={indice} jogo={jogo} corDeFundo={categoria.corSecundaria} />)}
             </div>
-        </section> 
-        : ''
+        </section>
+
     )
 }
 

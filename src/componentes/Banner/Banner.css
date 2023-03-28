@@ -1,12 +1,7 @@
-.banner {
+.cabecalho {
     background-color: #D787D7;
     text-align: center;
 }
-
-.banner img {
+.cabecalho img {
     max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-    
 }
